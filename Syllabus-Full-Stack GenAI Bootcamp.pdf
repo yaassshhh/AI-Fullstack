@@ -1,0 +1,749 @@
+  Full Stack
+Generative AI
+
+ BootCamp V1.0
+
+  FINE                       RAG                    AGENTS
+TUNING
+                                            LLMOPS
+                   GEN
+                     AI
+
+NATURAL LANGUAGE PROCESSING  GENERATIVE AI          RETRIEVAL AUGUMENT GENERATION
+
+FINETUNING                                  LLMOPS
+
+                             AGENTIC AI
+This course is designed for AI engineers, software developers, and technical leaders who want to
+transform theoretical Generative AI knowledge into production-ready expertise. Whether you are
+starting with large language models or advancing toward complex orchestration systems, you will
+master architecting and fine-tuning modern LLMs, building advanced RAG and multi-agent
+frameworks, implementing secure API integrations with safety guardrails, and deploying scalable,
+cloud-native AI applications. Through hands-on, real-world projects — including an Enterprise
+Intelligent Document Intelligence Platform, AI-Powered Software Lifecycle Automation System,
+an Autonomous Multigenetic Report Generation System — you will design, evaluate, and deploy
+enterprise-grade AI solutions on AWS and Azure with full evaluation, monitoring, and safety
+frameworks.
+
+ Learning Objectives
+
+ ✅ Master LLM Foundations: Understand transformer architecture, embeddings,
+
+  tokenization, and navigate the modern model landscape (LLMs, SLMs, Multimodal).
+
+ ✅ Build & Deploy AI APIs: Integrate commercial and cloud-managed LLM APIs,
+
+  implement cost control, and create abstraction layers for provider switching.
+
+ ✅ Implement Advanced Fine-Tuning: Apply full and parameter-efficient techniques
+
+  (LoRA, QLoRA) using frameworks like Hugging Face PEFT and Unsloth.
+
+ ✅ Architect Production RAG Systems: Design end-to-end pipelines from ingestion and
+
+  vector search to advanced retrieval, re-ranking, and multimodal grounding.
+
+ ✅ Develop & Orchestrate AI Agents: Create single and multi-agent systems with
+
+  planning, tool use, memory, and frameworks like LangGraph.
+
+ ✅ Ensure System Safety & Quality: Implement guardrails for input/output validation,
+
+  prompt injection defense, and rigorous evaluation strategies (LLM-as-a-judge, RAGAS).
+
+ ✅ Utilize the Full GenAI Toolchain: Work with key frameworks and platforms for
+
+  development (LangChain), vector databases (Pinecone, Qdrant), and MLOps (MLflow).
+
+ ✅ Deploy Scalable Cloud-Native AI: Containerize and deploy full-stack applications
+
+  using AWS (ECS, SageMaker) and Azure (AKS, AI Foundry) services.
+
+Verson 1.0  Full-Stack Generative AI BootCamp                                                     Page 2
+Course Information
+
+  Prerequisites
+
+     A strong foundation in Python programming and basic familiarity with machine learning
+     concepts is essential. Experience working with APIs (REST, JSON) and comfort using the
+     command line and Git will be necessary for hands-on labs. Prior exposure to core data
+     science libraries (e.g., NumPy, pandas) and a conceptual understanding of neural networks
+     will be highly beneficial. While the course covers advanced topics from the ground up,
+     learners with existing experience in software development, cloud platforms (AWS/Azure
+     basics), or previous work with any LLM API will be able to engage more deeply with the
+     deployment and orchestration modules.
+
+   This professional Generative AI course is designed as a 5–6 month intensive, structured learning
+   journey, taking you from the core mathematical foundations of transformers to the deployment of
+   sophisticated, autonomous AI systems.
+   Through a sequence of conceptual modules, hands-on coding labs, and three major end-to-end
+   projects—along with multiple proof-of-concepts (POCs) integrated into each module—you will
+   master both the theoretical foundations and the practical implementation of the modern GenAI
+   stack.The curriculum uniquely balances depth across fine-tuning, Retrieval-Augmented
+   Generation (RAG), and agentic AI, while emphasizing real-world production skills such as cloud-
+   native deployment, evaluation frameworks, and AI safety. By the end of the program, you will be
+   equipped to build, deploy, and maintain reliable, enterprise-grade AI applications.
+
+Estimated Time                  Required Skill Level
+
+         5-6 months 6hrs/week*             Intermediate
+
+Verson 1.0                      Full-Stack Generative AI BootCamp  Page 3
+Krish Naik Academy Team
+
+             Sunny Savita            Krish Naik              Mayank Aggrawal
+            GenAI Engineer       Chief AI Engineer           Senior ML Engineer
+
+                       Linkedin                Linkedin                  Linkedin
+
+             Monal Singh           Sourangshu Pal                Darius B.
+            Data Scientist       Senior Data Scientist       Head of Product
+
+                       Linkedin                    Linkedin                Linkedin
+
+Verson 1.0                       Full-Stack Generative AI BootCamp                   Page 4
+ Module 1
+
+Foundations of Modern GenAI
+
+This module establishes the core technical concepts behind Generative AI, from how text is
+processed by machines to the transformer models that power modern large language models.
+
+            Topics
+
+Introduction to Modern Generative AI  What GenAI is and how LLMs work at a
+& Large Language Models (LLMs)        high level
+
+Transformer Architecture (Core        Why transformers are the backbone of
+Concept)                              modern LLMs
+Text Encoding & Tokenization
+                                      Why text must be encoded, tokenization
+Evolution of Text Representations     basics, vocabulary creation, subword
+                                      tokens
+Embeddings, Vector Space &
+Similarity                            Classical encoding techniques and the
+                                      shift to word embeddings
+
+                                      Word, contextual, and sentence
+                                      embeddings, vector space
+                                      representation, similarity measures
+
+Verson 1.0                            Full-Stack Generative AI BootCamp                     Page 5
+ Module 2
+
+Understanding LLMs, SLMs & MultiModal
+LLMs
+
+This module categorizes the landscape of generative AI models, from major large language models
+to efficient and specialized variants, equipping you to select the right tool for any application.
+
+            Topics
+
+LLMs vs SLMs vs Multimodal Models  High-level differentiation and purpose of
+                                   each category
+
+Major LLM Families                 GPT, Gemini, Claude, LLaMA, Mistral,
+                                   Qwen
+Small & Efficient Language Models
+(SLMs)                             Phi, Gemma and their low-cost / low-
+Specialized Models (Code &         latency use cases
+Multimodal)
+                                   CodeLLaMA, StarCoder/StarCoder2,
+Model Selection Strategy           DeepSeek-Coder, Phi-3-Mini (Code),
+                                   LLaVA, BLIP, BLIP-2, CLIP
+
+                                   Choosing the right model based on task
+                                   type, cost, latency, modality, and
+                                   deployment needs
+
+Verson 1.0                         Full-Stack Generative AI BootCamp                                Page 6
+ Module 3
+
+API for Accessing LLMs
+
+This module provides the practical skills to interact with commercial LLMs via APIs, covering
+ecosystem navigation, core calling mechanics, cost control, and enterprise-grade deployment
+platforms.
+
+            Topics
+
+LLM API Ecosystem Overview          OpenAI, Anthropic, Gemini, Groq,
+                                    OpenRouter (who provides what & why)
+Making LLM API Calls (Core Hands-
+On)                                 Prompt → request → response,
+                                    parameters (temperature, max tokens),
+Token Usage, Cost & Latency         streaming vs non-streaming
+Management
+                                    Token counting, pricing models, cost
+Provider Switching & Abstraction    control strategies
+Layer
+                                    ↔ ↔ OpenAI Groq OpenRouter using
+
+                                    the same code structure
+
+Cloud-Managed LLM APIs (Enterprise  Azure OpenAI, AWS Bedrock, GCP
+Angle)                              Vertex AI (when & why enterprises use
+                                    them)
+
+Verson 1.0                          Full-Stack Generative AI BootCamp                          Page 7
+Module 4
+
+Fine-Tuning Techniques
+
+This module provides a comprehensive roadmap for adapting pre-trained models to specific tasks
+and domains, covering strategies, tooling, and modern techniques from foundational concepts to
+advanced paradigms.
+
+            Topics
+
+Foundations of Fine-Tuning           Fine-tuning in classical DL (CNNs),
+                                     limitations of RNN/LSTM, and why
+Fine-Tuning Landscape in GenAI       transformers scale
+Fine-Tuning Strategies for LLMs &
+SLMs                                 Hugging Face ecosystem vs LangChain
+                                     (training vs orchestration mindset)
+
+                                     Full fine-tuning vs parameter-efficient
+                                     approaches
+
+Parameter-Efficient Fine-Tuning      LoRA, QLoRA, PEFT overview and when
+(PEFT)                               to use each
+
+Dataset Preparation for Fine-Tuning  Instruction datasets, formatting,
+Advanced Optimization Techniques     cleaning, train/validation splits
+
+                                     Knowledge distillation and quantization
+                                     in LLMs
+
+Verson 1.0                           Full-Stack Generative AI BootCamp                          Page 8
+                                Topics
+
+Frameworks & Tooling for LLM Fine-      Hugging Face Transformers, PEFT,
+Tuning                                  Unsloth, Axolotl (awareness + usage)
+
+API-Based Fine-Tuning                   OpenAI / provider-based fine-tuning
+                                        workflows and limitations
+
+Model Packaging & Distribution          Hugging Face checkpoints, Safetensors,
+                                        GGUF, GGML formats
+
+Advanced Fine-Tuning Paradigms          RLHF, DPO, ORPO, GRPO (conceptual +
+Specialized Fine-Tuning                 positioning, not math-heavy)
+
+                                        Embedding model fine-tuning and
+                                        vision-language model fine-tuning
+
+Verson 1.0                          Full-Stack Generative AI BootCamp           Page 9
+ Module 5
+
+LLM Hosting on Your Own Server and
+Exposing as an API
+
+This module details the end-to-end process of customizing and deploying a private LLM on a
+cloud platform, then exposing it as a managed API for application integration.
+
+            Topics
+
+Fine-Tuning a Base Model on AWS    LoRA-based fine-tuning using managed
+SageMaker                          training infrastructure
+
+Deploying LLMs as SageMaker        Real-time inference endpoints and
+Endpoints                          scaling basics
+API Exposure & Traffic Management
+                                   Exposing the model using API Gateway
+Inference Compute Options          or Application Load Balancer (ALB)
+
+Client Integration                 AWS Lambda for lightweight or burst
+                                   inference, ECS Fargate for container-
+                                   based scalable inference
+
+                                   Calling the deployed LLM API from
+                                   frontend or backend applications
+
+Verson 1.0                         Full-Stack Generative AI BootCamp                        Page 10
+ Module 6
+
+Prompt Engineering
+
+This module teaches systematic methods for designing, managing, and optimizing prompts to
+reliably extract high-quality, structured, and cost-effective outputs from LLMs for real-world
+applications.
+
+Core Prompting Concepts  Topics
+
+                                        System vs User prompts, zero-shot, few-
+                                        shot prompting
+
+Reasoning-Based Prompting          Chain-of-Thought (CoT), self-
+Techniques                         consistency, ReAct (Reason + Act)
+Prompt Design Strategies
+                                   Task-wise prompting and domain-
+Production-Grade Prompt            specific prompting
+Management
+Structured & Controlled Prompting  Prompt libraries, Jinja2 templates, YAML-
+                                   based prompt configuration
+Optimization & Cost Control
+                                   JSON/YAML outputs, schema-based
+                                   prompts, guarded output enforcement
+
+                                   Token cost optimization and context
+                                   window optimization
+
+Verson 1.0                         Full-Stack Generative AI BootCamp                            Page 11
+ Module 7
+
+Retrieval-Augmented Generation (RAG)
+Systems
+
+This module covers the end-to-end architecture of a RAG system, teaching you how to connect
+LLMs to external data to reduce hallucinations and provide factually grounded responses.
+
+                             Topics
+
+Why LLMs Hallucinate & Why RAG is    Limitations of LLMs and grounding with
+Needed                               external knowledge
+
+End-to-End RAG System Architecture Ingestion → indexing → retrieval →
+                                                                       generation → response
+
+Data Ingestion & Parsing             PDFs, docs, web data, structured vs
+                                     unstructured content
+
+Chunking Strategies                  When to chunk, when NOT to chunk,
+                                     overlap trade-offs
+
+Embeddings & Vector Databases        Embedding selection, vector DB types
+                                     (local, open-source, managed)
+
+Metadata Design & Filtering          Metadata schemas, filters, and scoped
+                                     retrieval
+
+Verson 1.0                         Full-Stack Generative AI BootCamp                          Page 12
+                                 Topics
+
+Retrieval, Ranking & Re-Ranking          Similarity search, MMR, cross-encoder
+                                         re-ranking
+
+Prompting with Retrieved Context         Context injection, grounding, citation-
+                                         aware prompting
+
+Verson 1.0                        Full-Stack Generative AI BootCamp               Page 13
+ Module 8
+
+Advanced RAG & Multimodal Systems
+
+This module focuses on optimizing, evaluating, and extending RAG systems for production,
+covering performance tuning, reliability metrics, and handling multimodal data.
+
+                              Topics
+
+Context Engineering & Memory          Context window control, memory vs
+Management                            retrieval
+
+Caching & Performance Optimization    Response caching, embedding cache,
+                                      cost optimization
+
+RAG Evaluation & Reliability          Faithfulness, relevance, retrieval quality
+
+Multimodal RAG Systems                Text + image retrieval, vision-language
+Common Failure Modes in RAG           grounding
+
+                                      Bad chunks, noisy retrieval, missing
+                                      context, overlong prompts
+
+Verson 1.0                          Full-Stack Generative AI BootCamp                     Page 14
+ Module 9
+
+Agents, Multi-Agent & Deep Agent Systems
+
+This module explores autonomous AI agents, from foundational single-agent designs to complex
+multi-agent systems, focusing on architecture, reasoning, coordination, and safe, cost-effective
+deployment.
+
+                            Topics
+
+Agentic AI Fundamentals             What agents are and how they differ
+Single-Agent Architectures          from simple LLM pipelines
+
+                                    Planning, reasoning, acting loops within
+                                    one agent
+
+Multi-Agent System Designs          Supervisor, hierarchical, and network-
+                                    based agent architectures
+Deep Agent Systems
+                                    Long-horizon agents with planning,
+LLMs as the Reasoning & Decision    reflection, and iterative execution
+Core
+                                    Using LLMs for planning, tool selection,
+                                    and decision-making
+
+Tools as Agent Interfaces           APIs, functions, search, RAG, code
+                                    execution as tools
+
+Verson 1.0                        Full-Stack Generative AI BootCamp           Page 15
+                             Topics
+
+Agent Orchestration Layers           Coordinating agents using frameworks
+Memory & State Management            (LangGraph / CrewAI conceptually)
+Prompting Strategies for Agents
+                                     Short-term memory, long-term memory,
+                                     shared state across agents
+
+                                     Role-based prompts, planner prompts,
+                                     executor prompts
+
+Human-in-the-Loop Mechanisms         Approval gates, feedback loops, interrupt
+Safety Controls & Loop Prevention    & resume
+Cost & Execution Management
+Agentic RAG Architectures            Max steps, termination conditions, error
+                                     handling
+
+                                     Token usage budgeting, execution limits,
+                                     cost-aware agents
+
+                                     Agents combined with retrieval for
+                                     grounded reasoning
+
+Inter-Agent Collaboration &          Task delegation, result aggregation,
+Coordination                         conflict resolution
+
+Verson 1.0                         Full-Stack Generative AI BootCamp            Page 16
+ Module 10
+
+Evaluation Strategies
+
+This module establishes a comprehensive framework for evaluating the quality, reliability, and
+performance of generative AI systems, moving beyond simplistic metrics to a production-focused
+perspective.
+
+Observability & Debugging    Topics
+Foundations
+                                            Logging, monitoring, tracing prompts,
+                                            context, tools, and responses
+
+Why Classical Evaluation Breaks for   Why traditional ML metrics fail for LLM-
+GenAI                                 based systems
+
+Model-Level vs System-Level           Difference between evaluating a model
+Evaluation                            and evaluating a GenAI system
+
+Core Evaluation Strategies for GenAI  LLM-as-a-judge, human-in-the-loop,
+                                      offline vs online evaluation
+
+Evaluating RAG & Agentic Systems      Grounding, relevance, faithfulness,
+                                      hallucination detection
+
+System-Level Metrics Beyond           Cost, latency, UX, and quality–speed–
+Accuracy                              cost trade-offs
+
+Verson 1.0                            Full-Stack Generative AI BootCamp                         Page 17
+            Topics
+
+Classical Metrics & Their Limitations  Perplexity, loss, token-level metrics
+                                       (research vs production)
+
+Task-Specific Metrics                  Accuracy, BLEU, ROUGE, exact match vs
+Common Evaluation Anti-Patterns        semantic match
+
+                                       Single-metric obsession, ignoring
+                                       cost/latency, over-trusting LLM judges
+
+Verson 1.0                             Full-Stack Generative AI BootCamp       Page 18
+Module 11
+
+Guardrails
+
+This module teaches how to implement safety and reliability controls—guardrails—to constrain
+LLM inputs and outputs, ensuring GenAI systems operate safely, predictably, and in compliance
+with standards.
+
+Foundations of Guardrails     Topics
+
+                                             What guardrails are and why GenAI
+                                             systems need them
+
+Guardrails in Traditional Software vs  Validation, constraints, and safety before
+GenAI Systems                          and after LLMs
+
+Core Objectives of Guardrails          Safety, reliability, compliance, and trust
+
+Input Validation Guardrails            Prompt sanitization, length limits,
+Output Validation Guardrails           content filtering
+Schema-Based Guardrails
+                                       Response checks, format enforcement,
+                                       refusal logic
+
+                                       Pydantic-based schemas for structured
+                                       and controlled outputs
+
+Verson 1.0                             Full-Stack Generative AI BootCamp                       Page 19
+Prompt Injection Attacks       Topics
+
+                                              Types of prompt injections and defense
+                                              strategies
+
+Guardrails Tools & Frameworks  Guardrails.ai, OpenAI Guardrails, custom
+                               rule-based approaches
+
+Verson 1.0                     Full-Stack Generative AI BootCamp                      Page 20
+Module 12
+
+MCP
+
+This module covers the Model Context Protocol (MCP) as a standardized framework for
+connecting LLMs to external data and tools, moving beyond proprietary or ad-hoc integrations.
+
+                               Topics
+
+Introduction to Model Context          What MCP is and why it was introduced
+Protocol (MCP)
+
+Why MCP over Traditional Tool Calling MCP vs plugins vs function calling
+
+MCP in the GenAI Ecosystem             MCP with RAG, agents, and complex
+MCP Architecture Overview              workflows
+MCP Core Components
+                                       ↔ ↔ Client Server LLM interaction
+
+                                       model
+
+                                       MCP Host, MCP Client, MCP Server
+
+MCP Transports & Communication         STDIO, SSE, Streamable HTTP, Stateful
+Models                                 vs stateless servers and security
+                                       implications
+
+Verson 1.0                      Full-Stack Generative AI BootCamp                              Page 21
+MCP Python SDK & Tooling    Topics
+
+                                           MCP SDK overview, FastMCP vs low-
+                                           level servers, CLI tools
+
+Building MCP Servers        Project structure, FastMCP, server
+MCP Capabilities            lifecycle
+Advanced MCP Concepts
+MCP for Agentic AI Systems  Tools, structured outputs, reusable MCP
+                            prompts, context objects
+
+                            Authentication, OAuth clients,
+                            pagination, large data handling
+
+                            Using MCP as the tool layer for multi-
+                            agent systems
+
+Verson 1.0                  Full-Stack Generative AI BootCamp                 Page 22
+Module 13
+
+Cloud Services for GenAI - Amazon Web
+Services (AWS)
+
+This module provides a strategic overview of AWS's key managed services for building, deploying,
+and orchestrating enterprise-grade Generative AI and related intelligent applications.
+
+            Topics
+
+Core ML Platform & MLOps            Amazon SageMaker (Model training,
+Generative AI & Intelligent Agents  fine-tuning, deployment, and MLOps
+                                    workflows)
+Specialized AI & Media Services
+                                    Amazon Bedrock (Managed foundation
+                                    models and GenAI inference platform),
+                                    Agent Core (AWS) (Building and
+                                    orchestrating agent-based AI
+                                    workflows), Amazon OpenSearch
+                                    Service (Vector search and RAG-
+                                    enabled search systems)
+
+                                    Amazon Textract (Document
+                                    intelligence: OCR and structured data
+                                    extraction), Amazon Comprehend (NLP
+                                    services: entities, sentiment, key
+                                    phrases), Amazon Rekognition (Image
+                                    and video analysis for computer vision),
+                                    Amazon Transcribe (Speech-to-text
+                                    services)
+
+Verson 1.0                          Full-Stack Generative AI BootCamp                             Page 23
+Module 14
+
+No-Code Agent Tools
+
+This module introduces the n8n workflow automation platform, demonstrating how to build,
+orchestrate, and deploy AI-driven agents and automations with minimal to no code.
+
+                               Topics
+
+AI Automation Foundations with n8n     What n8n is, where it fits in GenAI
+                                       automation
+
+n8n Basics                             Setup, interface, nodes, workflows, JSON
+APIs & AI in n8n                       handling
+Agents & Multi-Agent Patterns
+RAG with n8n                           Calling APIs, using LLMs inside
+MCP + n8n                              workflows
+Real Automation Use Cases
+                                       Chain, parallel, controller, hierarchical
+                                       agent flows
+
+                                       RAG concept, Supabase / Pinecone
+                                       integration
+
+                                       MCP basics, n8n cloud vs self-hosted
+                                       usage
+
+                                       Social media automation, GitHub PR
+                                       automation, WhatsApp / Assistant
+                                       workflow
+
+Verson 1.0                          Full-Stack Generative AI BootCamp                     Page 24
+Module 15
+
+Claude Automation Mastery
+
+This module introduces the n8n workflow automation platform, demonstrating how to build,
+orchestrate, and deploy AI-driven agents and automations with minimal to no code.
+
+                              Topics
+
+Claude API & Models                   Understanding Claude model families,
+                                      API usage patterns, structured outputs,
+Claude Code (Advanced Coding          rate limits, and production integration
+Workflows)
+                                      Multi-file reasoning, debugging
+                                      strategies, refactoring assistance, large
+                                      codebase handling
+
+Claude Co-Work Mode                   Collaborative AI workflows, shared
+Claude MCP Integration                context sessions, productivity
+                                      optimization for teams
+
+                                      Exposing tools via MCP, server setup,
+                                      bidirectional tool communication,
+                                      enterprise-grade AI assistant integration
+
+Verson 1.0                    Full-Stack Generative AI BootCamp                           Page 24
+Module 16
+
+End-to-End Project With Deployment:
+Enterprise Document Intelligence System
+
+This module integrates all core concepts into a capstone project, guiding you through the design,
+implementation, and production deployment of a scalable, intelligent document analysis portal.
+
+                              Topics
+
+Document Ingestion Pipeline           Upload → parse → chunk → embed →
+                                      index with async, scalable processing
+
+Advanced RAG Architecture             Query rewriting, MMR, re-ranking,
+                                      citation-aware answer generation
+
+Single & Multi-Document Chat          Conversational memory, context
+                                      condensation, source-grounded
+                                      responses
+
+Document Comparison Engine            Semantic comparison and question-
+                                      driven side-by-side analysis
+
+LLM Orchestration Layer               Model routing (Groq / OpenAI / local),
+                                      prompt & context policies
+
+Caching & Performance Optimization    Redis caching, Cache-Augmented
+                                      Generation (CAG), embedding reuse
+
+Verson 1.0                          Full-Stack Generative AI BootCamp         Page 25
+                                  Topics
+
+Scalability & Reliability Design          Stateless APIs, autoscaling, queues,
+                                          retries, and fallbacks
+
+Evaluation & Guardrails                   Faithfulness, relevance, safety checks,
+Cloud-Native Deployment                   refusal on insufficient context
+
+                                          AWS ECS/Fargate, S3, RDS, Vector DB,
+                                          CI/CD pipelines, observability
+
+Verson 1.0                        Full-Stack Generative AI BootCamp                Page 26
+Module 17
+
+End-to-End Project with Deployment: AI-
+Powered Report Automation System
+
+This module guides you through building a multi-agent AI system that autonomously researches,
+analyzes, and generates comprehensive reports, from foundational architecture to a deployable
+application.
+
+Agentic AI Foundations  Topics
+
+                                       Single-agent vs multi-agent systems,
+                                       roles, async orchestration
+
+LLM & Tooling Setup             Base LLM (OpenAI / Groq), tool calling,
+                                function schemas
+Agent Role Design
+                                Search, Reader, Analyst, Generator,
+Agent Orchestration Frameworks  Coordinator with clear responsibilities
+
+Memory & Communication          LangGraph / CrewAI / AutoGen
+Management                      workflows and state graphs
+Research Toolkits Integration
+                                Shared state, short-term vs long-term
+                                memory, context control
+
+                                Web search APIs, Arxiv/PDF parsers,
+                                document loaders
+
+Verson 1.0                      Full-Stack Generative AI BootCamp                              Page 27
+                              Topics
+
+RAG Integration for Grounded          Vector DB, external knowledge
+Research                              grounding, citation-aware outputs
+
+Human-in-the-Loop Controls            Feedback checkpoints, approvals,
+UI & Backend System Design            interrupt & resume flows
+
+                                      FastAPI task dispatcher, report previews,
+                                      agent logs & traces
+
+Verson 1.0                    Full-Stack Generative AI BootCamp                  Page 28
+Module 18
+
+End-to-End Project with Deployment: AI-
+Powered Software Lifecycle Automation
+System,
+
+Build an AI-powered system that automates requirements, user stories, and test cases using
+agentic RAG workflows. Learn to architect and deploy a scalable, enterprise-grade SDLC
+automation platform.
+
+                                              Topics
+
+Problem Framing                    Understanding enterprise dev workflows,
+                                   requirement-to-testing lifecycle, and
+                                   identifying automation opportunities
+
+Knowledge Base & Document          Uploading BRD/PRD/Test docs,
+Ingestion                          document parsing, chunking strategies,
+                                   embeddings generation, vector database
+
+RAG Architecture                   Context retrieval from knowledge base,
+                                   semantic search, metadata filtering,
+                                   citation & traceability design
+
+Agentic Workflow Design            User Story Agent, Test Case Agent,
+                                   Refinement Agent, Coordinator logic,
+                                   multi-agent orchestration patterns
+
+Memory & Communication             Shared state, short-term vs long-term
+Management                         memory, context control
+
+Tool & Enterprise Integration      Integration with enterprise project
+                                   management systems, test management
+                                   platforms
+
+Deployment & Production Readiness  Dockerization, cloud deployment,
+                                   logging & monitoring, evaluation metrics,
+                                   AI safety controls
+
+Verson 1.0                         Full-Stack Generative AI BootCamp                        Page 27
+
